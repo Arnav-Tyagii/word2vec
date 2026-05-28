@@ -1,4 +1,4 @@
-# 🧠 Word2Vec & t-SNE From Scratch
+#  Word2Vec & t-SNE From Scratch
 
 A clean, self-contained, and completely dependency-free (except for NumPy and Matplotlib) implementation of **Word2Vec (Skip-gram & CBOW)** architectures along with a custom **t-SNE (t-Distributed Stochastic Neighbor Embedding)** dimensionality reduction algorithm built entirely from scratch.
 
@@ -6,7 +6,7 @@ This project serves as an educational deep-dive into the mechanics of word embed
 
 ---
 
-## 🚀 Visualizing the Results
+##  Visualizing the Results
 
 The script trains both models on a tiny semantic corpus, reduces the resulting 10-dimensional word vectors down to 2 dimensions using the custom t-SNE engine, and plots the spatial relationships alongside their training convergence curves:
 
@@ -19,7 +19,7 @@ The script trains both models on a tiny semantic corpus, reduces the resulting 1
 
 ---
 
-## ⚡ Key Features Implemented
+##  Key Features Implemented
 
 ### 1. Core Word2Vec Architectures
 * **Skip-gram Architecture:** Predicts the surrounding context words given a single target center word ($P(w_{t+j} | w_t)$). Highly effective for capturing rare words or distinct semantic relations in larger corpora.
@@ -35,7 +35,7 @@ The script trains both models on a tiny semantic corpus, reduces the resulting 1
 
 ---
 
-## 🛠️ Mathematical Foundations
+##  Mathematical Foundations
 
 ### Skip-gram Optimization
 The model minimizes the negative log-likelihood of context words given center words. For a single center-context pair $(c, o)$, the cross-entropy loss gradient with respect to output weights ($W_{out}$) and input weights ($W_{in}$) flows as follows:
@@ -55,11 +55,12 @@ $$\mathcal{C} = D_{KL}(P || Q) = \sum_{i} \sum_{j} p_{ij} \log rac{p_{ij}}{q_{i
 
 The analytical gradient mapping step for each low-dimensional coordinate $y_i$ is explicitly calculated as:
 
-$$rac{\partial \mathcal{C}}{\partial y_i} = 4 \sum_{j} (p_{ij} - q_{ij})(y_i - y_j)\left(1 + \|y_i - y_j\|^2ight)^{-1}$$
+$$rac{\partial \mathcal{C}}{\partial y_i} = 4 \sum_{j} (p_{ij} - q_{ij})(y_i - y_j)\left(1 + \|y_i - y_j\|^2
+ight)^{-1}$$
 
 ---
 
-## 💻 Getting Started
+## Getting Started
 
 ### Prerequisites
 Make sure you have a Python environment set up with standard data science packaging:
@@ -93,7 +94,7 @@ Word similarities (Skip-gram)
 
 ---
 
-## ⚙️ Configuration & Hyperparameters
+## Configuration & Hyperparameters
 
 You can tweak the parameters at the bottom of `word2vec_from_scratch.py` to observe how embedding spaces scale:
 
@@ -106,5 +107,5 @@ PERPLEXITY = 5.0  # Effective number of neighbors for t-SNE search
 
 ---
 
-## 📜 License
+## License
 This project is open-source and available under the **MIT License**. Feel free to use, modify, and distribute it for educational or research purposes!
